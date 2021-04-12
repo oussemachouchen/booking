@@ -1,0 +1,756 @@
+<header class="padding-global">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+    <a class="navbar-brand" [routerLink]="'.'"> <img
+        src="../../../assets/images/logo.svg" alt="Inmaa"
+        />
+    </a>
+
+    <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
+    <button class="navbar-toggler" type="button" (click)="isMenuCollapsed=
+      !isMenuCollapsed">
+      <i class="icon-menu"></i>
+    </button>
+
+    <!-- Step 2: Add the ngbCollapse directive to the element below. -->
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse
+      fixed-top-desk">
+      <ul class="navbar-nav justify-content-center w-100">
+        <li class="nav-item">
+          <!-- Step 4: Close the menu when a link is clicked. -->
+          <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed=
+            true">الصفحة
+            الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed=
+            true">حول</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed=
+            true">إتصل بنا</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed=
+            true">مساعدة</a>
+        </li>
+
+      </ul>
+
+    </div>
+    <a href="#" class="user-profile mr-auto">
+      <i class="icon-previous-arrow show-mobile"></i>
+      <img
+        src="../../../assets/images/user-icon.png" alt="user"
+        />
+    </a>
+  </nav>
+
+</header>
+
+<main>
+  <!-- searching hotels form -->
+  <app-booking-form class="hide-mobile"></app-booking-form>
+  <!-- bread crumb to be replaced by a dynamic component -->
+  <div class="padding-global hide-mobile">
+    <nav aria-label="breadcrumb">
+      <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">الصفحة الرئيسية</a></li>
+        <i class="icon-previous-arrow"></i>
+        <li class="breadcrumb-item"><a href="#">فنادق مكة المكرمة</a></li>
+        <i class="icon-previous-arrow"></i>
+        <li class="breadcrumb-item active" aria-current="page"> فندق
+          جار البيت </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- carousel -->
+  <carousel class="gallery-mobile show-mobile">
+    <slide>
+      <img src="../../../assets/images/image2.png" alt="first slide"
+        style="display: block; width: 100%;">
+    </slide>
+    <slide>
+      <img src="../../../assets/images/image1.png" alt="second slide"
+        style="display: block; width: 100%;">
+    </slide>
+    <slide>
+      <img src="../../../assets/images/image3.png" alt="third slide"
+        style="display: block; width: 100%;">
+    </slide>
+    <slide>
+      <img src="../../../assets/images/image4.png" alt="third slide"
+        style="display: block; width: 100%;">
+    </slide>
+    <slide>
+      <img src="../../../assets/images/image5.png" alt="third slide"
+        style="display: block; width: 100%;">
+    </slide>
+
+
+  </carousel>
+  <!-- carousel -->
+  <section class="section-1">
+
+    <div class="margin-3 row flex-wraps">
+      <span class="bold-title col-md-6 col-sm-12">
+        فندق جار البيت<ngb-rating [(rate)]="currentRate" [max]="5"
+          class="mr-2">
+          <ng-template let-fill="fill" let-index="index">
+            <span class="star" [class.filled]="fill === 100"
+              [class.bad]="index <3">&#9733;</span>
+          </ng-template>
+        </ngb-rating></span>
+      <span class="show-mobile hr"></span>
+      <div class="col-md-6 col-sm-12">
+        <button class="btn btn-choose mt-auto">أختر غرفتك</button>
+      </div>
+
+    </div>
+
+    <div class="mb-3 hide-mobile">
+      <i class="icon-placeholder"></i>
+      <span class="address">حي العزيزية - شارع صدقي, العزيزية, 24243 مكة
+        المكرمة, المملكة
+        العربية السعودية</span>
+      <a href=""><span class="show-more">عرض على الخريطة</span></a>
+
+    </div>
+    <div class="row mt-2 mb-3">
+
+      <!-- Gallery -->
+      <div class="row col-md-7 pl-0 col-sm-12 hide-mobile">
+        <div class="col-lg-3 d-flex flex-column
+          justify-content-between">
+
+          <img
+            src="../../../assets/images/image2.png"
+            class="small-img shadow-1-strong rounded"
+            alt=""
+            />
+          <img
+            src="../../../assets/images/image4.png"
+            class="small-img shadow-1-strong rounded" alt=""
+            />
+          <img
+            src="../../../assets/images/room1.png"
+            class="small-img shadow-1-strong rounded" alt=""
+            />
+          <!-- <div class="more-images"><div class="centered">شاهد الصورنا
+                          الـ 362</div></div> -->
+        </div>
+        <div class="col-lg-3 col-md-12 d-flex flex-column
+          justify-content-between">
+          <img
+            src="../../../assets/images/image1.png"
+            class="small-img shadow-1-strong rounded" alt=""
+            />
+          <img
+            src="../../../assets/images/image3.png"
+            class="small-img shadow-1-strong rounded" alt=""
+            />
+          <img
+            src="../../../assets/images/image5.png"
+            class="small-img shadow-1-strong rounded" alt=""
+            />
+
+        </div>
+
+
+
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <img
+            src="../../../assets/images/building.png"
+            class="big-img shadow-1-strong rounded" alt=""
+            />
+        </div>
+      </div>
+      <!-- Gallery -->
+
+      <div class="col-md-5 col-sm-12 row flex-wraps">
+        <div class="d-flex col-sm-12">
+          <span class="rate"> 7.7</span>
+          <div class="d-flex flex-column rate-count">
+            <span class="txt-green-bold">جيد</span>
+            <span class="small-text">278 تقييم</span>
+          </div>
+          <span class="show-mobile tab-orange">
+            المراجعات<i class="icon-previous-arrow"></i>
+          </span>
+        </div>
+        <hr>
+        <div class="col-sm-12">
+          <img class="map responsive" src="../../../assets/images/map.png"
+            alt="">
+        </div>
+        <hr>
+        <div class="mt-3 mb-3 d-flex justify-content-between col-sm-12">
+          <span>
+            <i class="icon-park"></i>
+            مواقف
+            سيارات مجانية
+          </span>
+          <span><i class="icon-wifi"></i>واي
+            فاي
+            مجاني</span>
+          <span><i class="icon-bus"></i>خدمة
+            نقل المطار</span>
+        </div>
+        <div class="mt-3 mb-3 mr-3 d-flex justify-content-between w-100">
+          <span><i class="icon-no-smoking"></i>غرف
+            لغير المدخنين</span>
+
+          <span><i class="icon-room-service"></i>خدمة
+            الغرف</span>
+
+          <a href=""> <span class="show-more float-left">أظهر جميع
+              الميزات الـ 30</span></a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- section hotel features -->
+  <section class="section-2">
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs" class="nav">
+      <li [ngbNavItem]="1" class="nav-item">
+        <a ngbNavLink>الغرف</a>
+        <ng-template ngbNavContent>
+          <div class="section-describe justify-content-between row ml-3">
+            <div class="col-md-8 col-sm-12">
+              <div class="row box-mobile">
+                <div class="col-md-4 col-sm-12 mt-30">
+                  <div class="row flex-nowraps">
+
+                    <div class="col-md-12 col-sm-6">
+                      <img src="../../../assets/images/room2.png"
+                        alt="hotel"
+                        class="img-hotel w-100">
+                    </div>
+
+                    <div class="col-md-12 col-sm-6">
+                      <div class="flex-row-mobile">
+                        <span class="bold-title">غرفة
+                          ثلاثية</span>
+                        <span [ngClass]="{'icon-down-arrow': collapseChoices,
+                          'icon-up-arrow': !collapseChoices}" class="show-mobile
+                          collapse-section mr-auto"
+                          (click)="collapseSection(1)"></span></div>
+                      <div class="d-flex flex-column mt-3">
+                        <span><i class="icon-area float-right"></i>33 متر مربع</span>
+                        <div class="flex-row-mobile hide-text dark-icon">
+                          <div class="d-flex mb-2"><i
+                              class="icon-air-conditioner"></i><span>
+                              تكييف</span></div>
+
+                          <div class="d-flex mb-2"><i class="icon-bathtub"></i><span>
+                              حوض
+                              الاستحمام</span></div>
+
+                          <div class="d-flex mb-2"><i class="icon-tv"></i>
+                            <span>
+                              تلفزيون</span></div>
+
+                          <div class="d-flex mb-2"><i class="icon-refrigerator"></i>
+                            <span> ثلاجة
+                              صغيرة</span></div>
+                        </div>
+
+                        <a href="#">
+                          <span class="show-more hide-mobile">أظهر المزيد
+                          </span>
+                        </a>
+                        <div [ngClass]="{'display-none': !collapseChoices,
+                          'display-block': collapseChoices}" class="show-mobile
+                          d-flex
+                          flex-column mr-auto">
+                          <span class="small-text">يبدأ سعر الليلة من</span>
+                          <span class="price">325 ريال</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div
+                  [ngClass]="{'hide-collapse-mobile':collapseChoices,'show-collapse-mobile':!collapseChoices}"
+                  class="col-md-8
+                  col-sm-12 mt-30">
+                  <div class="box-border box-margin row">
+                    <div class="col-md-7 col-sm-12 choice-1">
+                      <div class="flex-row-mobile">
+                        <span class="bold-title">الخيار 1</span>
+                        <div class="flex-reverse-row-mobile">
+                          <span class="cancel">الغائ مجانى</span>
+                          <span class="small-text float-left">قبل الاثنين 18
+                            يناير</span>
+                        </div>
+                      </div>
+
+                      <div class="two-columns-mobile">
+                        <span class="flex-30"><i class="icon-restaurant-bold"></i>نصف
+                          اقامة<div class="small-vertical"></div></span>
+                        <span class="flex-50"><i class="icon-window"></i>اطلالة
+                          جزئية على الكعبة <div class="small-vertical"></div></span>
+                        <span><i class="icon-bed float-right"></i>2
+                          سرير مزدوج كبير جداً</span>
+                      </div>
+                    </div>
+                    <div class="vertical"></div>
+                    <div class="col d-flex flex-reverse-row-mobile text-left">
+                      <div class="price-columns">
+                        <span class="price">488 ريال</span>
+                        <span class="font-semibold">لمدة 10 ليالٍ</span>
+                        <span class="text-grey">يشمل الضرائب والرسوم</span>
+                      </div>
+                      <div class="mt-auto mr-auto w-90 hide-mobile">
+                        <button class="btn btn-choose w-100">اختر</button>
+                      </div>
+                      <div class="mt-auto w-90 show-mobile d-flex
+                        justify-content-between">
+                        <span class="mobile-radius">+</span> 1
+                        <span class="mobile-radius">-</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-border box-margin row">
+                    <div class="col-md-7 col-sm-12 choice-2">
+                      <div class="flex-row-mobile">
+                        <span class="bold-title">الخيار 2</span>
+                        <div class="flex-reverse-row-mobile">
+                          <span class="cancel">الغائ مجانى</span>
+                          <span class="small-text float-left">قبل الاثنين 18
+                            يناير</span>
+                        </div>
+                      </div>
+
+                      <div class="two-columns-mobile">
+                        <span class="flex-30"><i class="icon-restaurant-bold"></i>لا
+                          تشمل الوجبات<div class="small-vertical"></div></span>
+                        <span class="flex-30 mr-2"><i class="icon-window"></i>بدون
+                          الاطلالة<div class="small-vertical"></div></span>
+                        <span><i class="icon-bed float-right"></i>3 أسرة مفردة</span>
+                      </div>
+                    </div>
+                    <div class="vertical"></div>
+                    <div class="col d-flex flex-reverse-row-mobile text-left">
+                      <div class="price-columns">
+                        <span class="price">325 ريال</span>
+                        <span class="font-semibold">لمدة 10 ليالٍ</span>
+                        <span class="text-grey">يشمل الضرائب والرسوم</span>
+                      </div>
+                      <div class="mt-auto mr-auto w-90">
+                        <button class="btn btn-choose w-100">اختر</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-border box-margin row">
+                    <div class="col-md-7 col-sm-12 choice-3">
+                      <div class="flex-row-mobile">
+                        <span class="bold-title">الخيار 3</span>
+                        <div class="flex-reverse-row-mobile">
+                          <span class="nocancel">غير قابل للاسترجاع</span>
+                        </div>
+                      </div>
+
+                      <div class="two-columns-mobile">
+                        <span class="flex-30"><i class="icon-restaurant-bold"></i>اقامة
+                          كاملة<div class="small-vertical"></div></span>
+                        <span class="flex-40"><i class="icon-window"></i>اطلالة
+                          على الكعبة<div class="small-vertical"></div></span>
+                        <span><i class="icon-bed float-right"></i>1 سرير مزدوج
+                          و1 سرير مفرد</span>
+                      </div>
+                    </div>
+                    <div class="vertical"></div>
+                    <div class="col d-flex flex-reverse-row-mobile text-left">
+                      <div class="price-columns">
+                        <span class="price">613 ريال</span>
+                        <span class="font-semibold">لمدة 10 ليالٍ</span>
+                        <span class="text-grey">يشمل الضرائب والرسوم</span>
+                      </div>
+                      <div class="mt-auto mr-auto w-90">
+                        <button class="btn btn-choose w-100">اختر</button>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="hr-bold"></div>
+              <div class="row box-mobile">
+                <div class="col-md-4 col-sm-12 mt-30">
+                  <div class="row flex-nowraps">
+
+                    <div class="col-md-12 col-sm-6">
+                      <img src="../../../assets/images/room2.png"
+                        alt="hotel"
+                        class="img-hotel w-100">
+                    </div>
+
+                    <div class="col-md-12 col-sm-6">
+                      <div class="flex-row-mobile">
+                        <span class="bold-title">غرفة ثلاثية مع حمام</span>
+                        <span [ngClass]="{'icon-down-arrow': !collapseChoices,
+                          'icon-up-arrow': collapseChoices}" class="show-mobile
+                          collapse-section mr-auto"
+                          (click)="collapseSection(1)"></span></div>
+                      <div class="d-flex flex-column mt-3">
+                        <span><i class="icon-area float-right"></i>33 متر مربع</span>
+                        <div class="flex-row-mobile hide-text dark-icon">
+                          <div class="d-flex mb-2"><i
+                              class="icon-air-conditioner"></i><span>
+                              تكييف</span></div>
+
+                          <div class="d-flex mb-2"><i class="icon-bathtub"></i><span>
+                              حوض
+                              الاستحمام</span></div>
+
+                          <div class="d-flex mb-2"><i class="icon-tv"></i>
+                            <span>
+                              تلفزيون</span></div>
+
+                          <div class="d-flex mb-2"><i class="icon-refrigerator"></i>
+                            <span> ثلاجة
+                              صغيرة</span></div>
+                        </div>
+
+                        <a href="#">
+                          <span class="show-more hide-mobile">أظهر المزيد
+                          </span>
+                        </a>
+                        <div [ngClass]="{'display-none': collapseChoices,
+                          'display-block': !collapseChoices}" class="show-mobile
+                          d-flex
+                          flex-column mr-auto">
+                          <span class="small-text">يبدأ سعر الليلة من</span>
+                          <span class="price">325 ريال</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div
+                  [ngClass]="{'hide-collapse-mobile':!collapseChoices,'show-collapse-mobile':collapseChoices}"
+                  class="col-md-8
+                  col-sm-12 mt-30">
+                  <div class="box-border box-margin row">
+                    <div class="col-md-7 col-sm-12 choice-1">
+                      <div class="flex-row-mobile">
+                        <span class="bold-title">الخيار 1</span>
+                        <div class="flex-reverse-row-mobile">
+                          <span class="cancel">الغائ مجانى</span>
+                          <span class="small-text float-left">قبل الاثنين 18
+                            يناير</span>
+                        </div>
+                      </div>
+
+                      <div class="two-columns-mobile">
+                        <span class="flex-30"><i class="icon-restaurant-bold"></i>نصف
+                          اقامة<div class="small-vertical"></div></span>
+                        <span class="flex-50"><i class="icon-window"></i>اطلالة
+                          جزئية على الكعبة <div class="small-vertical"></div></span>
+                        <span><i class="icon-bed float-right"></i>2
+                          سرير مزدوج كبير جداً</span>
+                      </div>
+                    </div>
+                    <div class="vertical"></div>
+                    <div class="col d-flex flex-reverse-row-mobile text-left">
+                      <div class="price-columns">
+                        <span class="price">488 ريال</span>
+                        <span class="font-semibold">لمدة 10 ليالٍ</span>
+                        <span class="text-grey">يشمل الضرائب والرسوم</span>
+                      </div>
+                      <div class="mt-auto mr-auto w-90">
+                        <button class="btn btn-choose w-100">اختر</button>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="box-border box-margin row">
+                    <div class="col-md-7 col-sm-12 choice-2">
+                      <div class="flex-row-mobile">
+                        <span class="bold-title">الخيار 2</span>
+                        <div class="flex-reverse-row-mobile">
+                          <span class="cancel">الغائ مجانى</span>
+                          <span class="small-text float-left">قبل الاثنين 18
+                            يناير</span>
+                        </div>
+                      </div>
+
+                      <div class="two-columns-mobile">
+                        <span class="flex-30"><i class="icon-restaurant-bold"></i>لا
+                          تشمل الوجبات<div class="small-vertical"></div></span>
+                        <span class="flex-30 mr-2"><i class="icon-window"></i>بدون
+                          الاطلالة<div class="small-vertical"></div></span>
+                        <span><i class="icon-bed float-right"></i>3 أسرة مفردة</span>
+                      </div>
+                    </div>
+                    <div class="vertical"></div>
+                    <div class="col d-flex flex-reverse-row-mobile text-left">
+                      <div class="price-columns">
+                        <span class="price">325 ريال</span>
+                        <span class="font-semibold">لمدة 10 ليالٍ</span>
+                        <span class="text-grey">يشمل الضرائب والرسوم</span>
+                      </div>
+                      <div class="mt-auto mr-auto w-90">
+                        <button class="btn btn-choose w-100">اختر</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-border box-margin row">
+                    <div class="col-md-7 col-sm-12 choice-3">
+                      <div class="flex-row-mobile">
+                        <span class="bold-title">الخيار 3</span>
+                        <div class="flex-reverse-row-mobile">
+                          <span class="nocancel">غير قابل للاسترجاع</span>
+                        </div>
+                      </div>
+
+                      <div class="two-columns-mobile">
+                        <span class="flex-30"><i class="icon-restaurant-bold"></i>اقامة
+                          كاملة<div class="small-vertical"></div></span>
+                        <span class="flex-40"><i class="icon-window"></i>اطلالة
+                          على الكعبة<div class="small-vertical"></div></span>
+                        <span><i class="icon-bed float-right"></i>1 سرير مزدوج
+                          و1 سرير مفرد</span>
+                      </div>
+                    </div>
+                    <div class="vertical"></div>
+                    <div class="col d-flex flex-reverse-row-mobile text-left">
+                      <div class="price-columns">
+                        <span class="price">613 ريال</span>
+                        <span class="font-semibold">لمدة 10 ليالٍ</span>
+                        <span class="text-grey">يشمل الضرائب والرسوم</span>
+                      </div>
+                      <div class="mt-auto mr-auto w-90">
+                        <button class="btn btn-choose w-100">اختر</button>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12 mt-30 mb-3 box-border
+              fixed-bottom-mobile">
+              <div class="show-mobile d-flex flex-column ml-auto"><span>غرفة
+                  واحدة مقابل</span>
+                <div class="price">488 ريال</div>
+              </div>
+              <button class="btn btn-apply" disabled>احجز الان</button>
+            </div>
+          </div>
+        </ng-template>
+      </li>
+      <li [ngbNavItem]="2" class="nav-item">
+        <a ngbNavLink>المراجعات</a>
+        <ng-template ngbNavContent>
+          <div class="section section-testimonials">
+            <!-- <h1>المراجعات</h1> -->
+            <app-testimonials></app-testimonials>
+          </div>
+        </ng-template>
+      </li>
+      <li [ngbNavItem]="3" class="nav-item">
+        <a ngbNavLink>سياسة الفندق</a>
+        <ng-template ngbNavContent>
+          <section class="section-policy">
+            <!-- <h1>سياسة الفندق</h1> -->
+            <div class="row m-40">
+              <div class="col-3">
+                تسجيل الوصول والمغادرة
+              </div>
+              <div class="col row">
+                <div class="col6">
+                  <span>
+                    تسجيل الوصول
+                  </span>
+                  <span class="strong">
+                    من الساعة 16:00
+                  </span>
+                </div>
+                <div class="col-6 mr-40">
+                  <span>
+                    تسجيل الخروج </span>
+                  <span class="strong">
+                    قبل الساعة 14:00
+                  </span>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row m-40">
+              <div class="col-3">
+                الأطفال والأسرة الإضافية
+              </div>
+              <div class="col">
+
+                <p>الأطفال مرحب بهم في هذا الفندق. قد يتم فرض رسوم
+                  إضافية عند
+                  إقامة طفل في الفندق مع الوالدين أو الأوصياء ، يرجى
+                  التأكيد
+                  مع الفندق.</p>
+                <p class="font-semibold">ملاحظات</p>
+                <p>تختلف سياسات الأسرة الخاصة بالأطفال والأسرة الإضافية
+                  حسب
+                  الغرفة ، ويكون سعر كل غرفة لعدد محدد من الضيوف. قد
+                  يتم فرض
+                  رسوم إضافية لمرافقة الأطفال والضيوف الإضافيين. لمزيد
+                  من
+                  التفاصيل ، يرجى التأكيد مع الفندق.</p>
+              </div>
+
+            </div>
+            <hr>
+            <div class="row m-40">
+              <div class="col-3">
+                موقف سيارات
+              </div>
+              <div class="col">
+                <p>لا يلزم الحجز: تتوفر مواقف خاصة للسيارات في الموقع
+                  (مجانًا).</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row m-40">
+              <div class="col-3">
+                الحيوانات الأليفة
+              </div>
+              <div class="col">
+                <p>غير مسموح بالحيوانات</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row m-40">
+              <div class="col-3">
+                الدفع في الفندق
+              </div>
+              <div class="col">
+                <p>يقبل الفندق طرق الدفع التالية:</p>
+                <img src="../../assets/images/cards.png" alt="cards"
+                  style="width: 140px;">
+              </div>
+            </div>
+            <div class="txt-align-center">
+              <a href="#">
+                <span class="show-more">أظهر المزيد </span>
+              </a>
+            </div>
+          </section>
+        </ng-template>
+      </li>
+    </ul>
+
+    <div [ngbNavOutlet]="nav" class="mt-2"></div>
+  </section>
+
+  <!-- hotel description section -->
+  <section class="section-description">
+    <h1>وصف الفندق</h1>
+    <p class="hotel-desc">يقع Gaar Albit Hotel في مكة المكرمة على بعد 7 كم
+      من كهف حراء وعلى بعد
+      9 كم من أبراج البيت ويوفر مكان إقامة مع صالة مشتركة وخدمة الواي فاي
+      المجانية في جميع أنحاء مكان الإقامة بالإضافة إلى مواقف خاصة ومجانية
+      للسيارات للضيوف الذين يقودون سياراتهم، يقع مكان الإقامة على بعد 10
+      كم من مكة مول وعلى بعد 11 كم من المسجد الحرام وعلى بعد 20 كم من
+      عرفات. يوفر مكان الإقامة مكتب استقبال يعمل على مدار 24 ساعة وخدمة
+      الغرف وتنظيم الرحلات للضيوف. تحتوي الغرف على تكييف وتلفزيون بشاشة
+      مسطحة مع قنوات فضائية وغلاية وبيديه ولوازم استحمام مجانية وخزانة
+      ملابس. تحتوي الوحدات في الفندق على حمام خاص مع دش. يقع أبراج البيت
+      مول على بعد 10 كم من Gaar Albit Hotel في حين يقع زمزم ويل على بعد 10
+      كم من مكان الإقامة، ويعتبر مطار الملك عبد العزيز الدولي المطار
+      الأقرب لمكان الإقامة حيث يقع على بعد 103 كم منه ويوفر مكان الإقامة
+      خدمة نقل المطار مقابل تكلفة إضافية. نحن نتكلم لغتك!</p>
+
+    <div class="txt-align-center">
+      <a href="#">
+        <span class="show-more">أظهر المزيد </span>
+      </a>
+    </div>
+  </section>
+  <section class="section-services">
+    <h1>الخدمات و المرافق</h1>
+
+    <div class="row flex-wraps m-40">
+      <div class="col-md-3 col-sm-12 items">
+        <span class="font-semibold">المرافق الأكثر شهرة</span>
+      </div>
+      <div class="col-md-9 col-sm-12">
+        <ul class="nav-links">
+          <li class="nav-item">
+            <i class="icon-park"></i>
+            مواقف
+            سيارات مجانية
+          </li>
+          <li class="nav-item"><i class="icon-no-smoking"></i> غرف
+            لغير المدخنين</li>
+          <li class="nav-item"><i class="icon-wifi"></i> واي فاي
+            مجاني</li>
+          <li class="nav-item"><i class="icon-room-service"></i> خدمة
+            الغرف</li>
+          <li class="nav-item"><i class="icon-bus"></i>خدمة
+            نقل المطار</li>
+          <li class="nav-item"><i class="icon-wheelchair"></i>مرافق
+            الإحتياجات
+            الخاصة</li>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="txt-align-center">
+      <a href="#">
+        <span class="show-more">أظهر المزيد </span>
+      </a>
+    </div>
+  </section>
+</main>
+<footer class="padding-global">
+  <div class="row m-40 hide-mobile">
+    <div class="col-md-3"><input class="curved-input" type="text"
+        placeholder="عنوان بريدك الإلكتروني ..." />
+    </div>
+    <div class="col-3"><button class="btn btn-apply">اشتراك</button></div>
+    <div class="col-3 apply-txt">
+      <span class="txt-primary">اشترك</span>
+      <span class="txt-secondary">حتى تصلك أفضل عروضنا</span>
+    </div>
+    <div class="col-3 logo">
+      <i class="icon-inma-logo"></i>
+    </div>
+
+  </div>
+  <hr class="hide-mobile" />
+  <div class="row flex-wraps m-40">
+    <div class="col-md-6 col-sm-12">
+      <ul class="nav-links">
+        <li class="nav-item"><a href="#"><i class="icon-previous-arrow"></i>حول</a></li>
+        <li class="nav-item"><a href="#"><i class="icon-previous-arrow"></i>اتصل</a></li>
+        <li class="nav-item"><a href="#"><i class="icon-previous-arrow"></i>ضمان
+            الخدمة</a></li>
+        <li class="nav-item"><a href="#"><i class="icon-previous-arrow"></i>قائمة
+            الفنادق</a></li>
+        <li class="nav-item"><a href="#"><i class="icon-previous-arrow"></i>مساعدة</a></li>
+      </ul>
+    </div>
+    <span class="show-mobile hr"></span>
+    <div class="col-md-6 col-sm-12 logo text-center">
+      <a href="#"><i class="icon-youtube"></i></a>
+      <a href="#"> <i class="icon-facebook"></i></a>
+      <a href="#"><i class="icon-instagram"></i></a>
+      <a href="#"><i class="icon-twitter"></i></a>
+    </div>
+
+  </div>
+  <hr/>
+    <div class="text-center">
+      JOODBOOKING © 2021
+    </div>
+  </footer>
+  <router-outlet></router-outlet>

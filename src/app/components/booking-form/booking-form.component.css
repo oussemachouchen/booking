@@ -1,0 +1,25 @@
+.icon-calender:before {
+	color: #2b98aa;
+}
+.icon-down-arrow:before {
+	color: #2b98aa;
+}
+.icon-door:before {
+	color: #2b98aa;
+}
+.icon-placeholder:before {
+	color: #2b98aa;
+}
+.color-darkgreen {
+	color: #2b98aa;
+}
+.icon-add:before {
+	font-size: x-large;
+	color: #2b98aa;
+	margin-left: 4vmin;
+}
+.icon-remove:before {
+	font-size: x-large;
+	color: #2b98aa;
+	margin-right: 4vmin;
+}

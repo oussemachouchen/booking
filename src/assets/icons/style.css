@@ -1,0 +1,153 @@
+@font-face {
+  font-family: 'inma2';
+  src:  url('fonts/inma2.eot?jylm10');
+  src:  url('fonts/inma2.eot?jylm10#iefix') format('embedded-opentype'),
+    url('fonts/inma2.ttf?jylm10') format('truetype'),
+    url('fonts/inma2.woff?jylm10') format('woff'),
+    url('fonts/inma2.svg?jylm10#inma2') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'inma2' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close:before {
+  content: "\e913";
+}
+.icon-menu:before {
+  content: "\e912";
+}
+.icon-star-full:before {
+  content: "\e9c3";
+}
+.icon-radio-button-selected:before {
+  content: "\e9c2";
+}
+.icon-radio-button-unselected:before {
+  content: "\e9c1";
+}
+.icon-remove:before {
+  content: "\e900";
+}
+.icon-add:before {
+  content: "\e901";
+}
+.icon-facebook:before {
+  content: "\e902";
+}
+.icon-youtube:before {
+  content: "\e903";
+}
+.icon-instagram:before {
+  content: "\e904";
+}
+.icon-twitter:before {
+  content: "\e905";
+}
+.icon-remove-bold:before {
+  content: "\e906";
+}
+.icon-air-conditioner:before {
+  content: "\e907";
+}
+.icon-area:before {
+  content: "\e908";
+}
+.icon-add-bold:before {
+  content: "\e909";
+}
+.icon-bathtub:before {
+  content: "\e90a";
+}
+.icon-bed:before {
+  content: "\e90b";
+}
+.icon-bus:before {
+  content: "\e90c";
+}
+.icon-cocktail:before {
+  content: "\e90d";
+}
+.icon-room-service:before {
+  content: "\e90e";
+}
+.icon-restaurant:before {
+  content: "\e90f";
+}
+.icon-door:before {
+  content: "\e910";
+}
+.icon-restaurant-bold:before {
+  content: "\e911";
+}
+.icon-inma-logo:before {
+  content: "\e930";
+}
+.icon-heart:before {
+  content: "\e931";
+}
+.icon-heart-outline:before {
+  content: "\e932";
+}
+.icon-rajhi-bank:before {
+  content: "\e933";
+}
+.icon-sabb-bank:before {
+  content: "\e934";
+}
+.icon-no-smoking:before {
+  content: "\e935";
+}
+.icon-park:before {
+  content: "\e936";
+}
+.icon-placeholder:before {
+  content: "\e938";
+}
+.icon-refrigerator:before {
+  content: "\e939";
+}
+.icon-tv:before {
+  content: "\e93a";
+}
+.icon-previous-arrow:before {
+  content: "\e93b";
+}
+.icon-next-arrow:before {
+  content: "\e93c";
+}
+.icon-down-arrow:before {
+  content: "\e92f";
+}
+.icon-up-arrow:before {
+  content: "\e937";
+}
+.icon-calender:before {
+  content: "\e93d";
+}
+.icon-wheelchair:before {
+  content: "\e93e";
+}
+.icon-wifi:before {
+  content: "\e93f";
+}
+.icon-wifi-fill:before {
+  content: "\e940";
+}
+.icon-window:before {
+  content: "\e941";
+}

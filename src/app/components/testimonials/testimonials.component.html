@@ -1,0 +1,41 @@
+<div *ngFor="let item of collection | paginate: { itemsPerPage: 10,
+    currentPage: p }">
+
+
+    <div class="row m-40">
+        <div class="col-4">
+            <img src="../../../assets/images/user-icon2.png"
+                class="profile-img">
+            <div class="profile">
+                <span class="font-semibold">
+                    {{item.userName}}
+                </span>
+                <div class="p-2">
+                    <img src="../../../assets/images/flag.png"
+                        class="flag">
+                    <span class="small-text"> {{item.country}}</span>
+                </div>
+                <span class="small-text">تاريخ التقييم|
+                    {{item.date|date}}</span>
+            </div>
+
+        </div>
+        <div class="col">
+
+            <div class="rating">
+                <span class="rating-text"> جيد جداً <span class="badge
+                        badge-primary"> {{item.rating}}</span></span>
+
+            </div>
+
+            <p>{{item.message}}</p>
+
+
+        </div>
+    </div>
+    <hr></div>
+
+
+<pagination-controls class="paginator" (pageChange)="p= $event"
+    previousLabel=""
+    nextLabel=""> </pagination-controls>

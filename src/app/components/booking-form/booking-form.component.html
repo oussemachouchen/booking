@@ -1,0 +1,117 @@
+<div class="padding-global form-search">
+    <form class="form-inline">
+        <div class="form-group col-md-2 d-flex flex-column mb-2
+            location-dropdown"
+            dropdown>
+            <label for="city">الوجهة</label>
+
+            <div class="row complex-placeholder rounded-input mb-4"
+                dropdownToggle>
+                <i class="icon-placeholder mr-1"></i>
+                <span class="col-md-10 label-right"><i
+                        class="icon-down-arrow float-left"></i>{{selectedLocation}}</span>
+            </div>
+            <div *dropdownMenu
+                class="dropdown-menu p-4 w-50 row">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio"
+                        name="exampleRadios"
+                        id="exampleRadios1" value="مكة المكرمة" checked>
+                    <label class="form-check-label mr-2" for="exampleRadios1">
+                        مكة المكرمة
+                    </label>
+                </div>
+                <hr>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio"
+                        name="exampleRadios"
+                        id="exampleRadios2" value="مكة المكرمة">
+                    <label class="form-check-label mr-2" for="exampleRadios2">
+                        مكة المكرمة
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group col-md-4 d-flex flex-column mb-2">
+            <div class="row w-100">
+                <label for="date-picker" class="col-md-5 label-right mr-2">تاريخ
+                    الوصول</label>
+                <label for="date-picker" class="col-md-6 label-right mr-m1">تاريخ
+                    المغادرة</label>
+            </div>
+
+            <div class="row complex-placeholder rounded-input mb-4"
+                #datePicker bsDaterangepicker (bsValueChange)="setDate($event)"
+                [bsValue]="bsRangeValue">
+                <i class="icon-calender mr-1"></i>
+                <span class="col-md-5 label-right right"><i
+                        class="float-left"></i>
+                    {{startDate|date:'fullDate':'+0200':'ar'}}</span>
+                <i class="icon-down-arrow"></i>
+
+                <span class="mr-1 ml-1 vl color-darkgreen"></span>
+                <span class="col-md-5 label-right right">
+                    {{endDate|date:'fullDate':'+0200':'ar'}}</span>
+                <i class="icon-down-arrow"></i>
+            </div>
+        </div>
+        <div class="form-group col-md-4 mb-2 d-flex flex-column rooms-dropdown"
+            dropdown>
+            <label class="">نوع وعدد الغرف</label>
+            <div class="row complex-placeholder rounded-input mb-4"
+                dropdownToggle>
+                <i class="icon-door mr-1"></i>
+                <span class="col-md-5 label-right right"><i
+                        class="float-left"></i>1 نوع</span>
+                <i class="icon-down-arrow"></i>
+                <span class="col-md-5 label-right right"><i
+                        class="float-left"></i>1 غرفة</span>
+                <i class="icon-down-arrow"></i>
+            </div>
+
+            <form
+                *dropdownMenu
+                class="dropdown-menu p-4 w-75 row"
+                (click)="$event.stopPropagation();">
+                <div class="col-md-12">
+                    <em class="float-right">غرفة</em>
+                </div>
+
+                <div class="form-group col-md-12 row">
+                    <div class="d-flex flex-column col-md-6">
+                        <label for="exampleDropdownFormEmail2">النوع</label>
+                        <em>اختر نوع الغرفة</em>
+                    </div>
+
+                    <select class="rounded-input col-md-6">
+                        <option value="1">غرفة ثلاثية</option>
+                        <option value="1">غرفة ثناثية</option>
+                        <option value="1">غرفة رياعية</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-12 row">
+                    <div class="d-flex flex-column col-md-6">
+                        <label for="exampleDropdownFormPassword2">العدد</label>
+                        <em>عدد هذا نوع من الغرف</em>
+                    </div>
+
+                    <div class="col-md-6 mt-4">
+                        <i class="icon-remove"></i> <span>1</span> <i
+                            class="icon-add"></i>
+                    </div>
+                </div>
+                <hr>
+                <div class="col-md-12 text-center">
+                    <a class="">
+                        + أضف غرفة
+                    </a>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="col-md-2 mb-4"><button class="btn btn-search w-100"
+                (click)="findHotel()">ابحث</button></div>
+    </form>
+</div>

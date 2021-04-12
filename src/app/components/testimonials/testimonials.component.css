@@ -1,0 +1,73 @@
+.profile {
+	display: flex;
+	flex-direction: column;
+	margin-right: 30px;
+}
+.small-text {
+	font-size: 14px;
+	color: #8b8b8b;
+}
+.flag {
+	float: right;
+	width: 29px;
+	height: 19px;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+.profile-img {
+	float: right;
+	width: 60px;
+	height: 60px;
+	margin-left: 20px;
+}
+.rating {
+	margin: 10px 0px 10px 0px;
+}
+.rating-text {
+	color: #2b98aa;
+	font-weight: bold;
+}
+.badge {
+	padding: 8px 8px 4px 8px;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	float: right;
+	margin-left: 8px;
+	background-color: #2b98aa;
+	border-radius: 13px;
+}
+
+.paginator ::ng-deep .ngx-pagination .current {
+	background: #faa628;
+	border-radius: 23px;
+}
+.paginator ::ng-deep .ngx-pagination a > span {
+	color: #2b98aa;
+	font-family: Cairo, sans-serif;
+	font-weight: bold;
+}
+.paginator ::ng-deep .ngx-pagination .pagination-next > a::after {
+	content: '>';
+	color: #2b98aa;
+	font-weight: bold;
+}
+.paginator ::ng-deep .ngx-pagination .pagination-next.disabled::after {
+	content: '>';
+	color: #bfe5eb;
+	font-weight: bold;
+}
+.paginator ::ng-deep .ngx-pagination .pagination-previous > a::before {
+	content: '<';
+	color: #2b98aa;
+	font-weight: bold;
+}
+.paginator ::ng-deep .ngx-pagination .pagination-previous.disabled::before {
+	content: "<";
+	color: #bfe5eb;
+	font-weight: bold;
+}
+.paginator {
+	display: flex;
+	justify-content: center;
+}

@@ -1,0 +1,30 @@
+.icon-facebook:before {
+	font-size: xxx-large;
+}
+.icon-youtube:before {
+	font-size: xxx-large;
+}
+.icon-instagram:before {
+	font-size: xxx-large;
+}
+.icon-twitter:before {
+	font-size: xxx-large;
+}
+.icon-inma-logo:before {
+	font-size: 10rem;
+}
+.icon-up-arrow {
+	color: var(--dark-green);
+	font-size: smaller;
+}
+.icon-down-arrow {
+	color: var(--dark-green);
+	font-size: smaller;
+}
+.icon-add::before,
+.icon-remove::before {
+	color: white;
+	background-color: var(--dark-green);
+	border-radius: 20px;
+	font-size: xxx-large;
+}
