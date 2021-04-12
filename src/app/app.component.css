@@ -25,6 +25,6 @@
 .icon-remove::before {
 	color: white;
 	background-color: var(--dark-green);
-	border-radius: 20px;
+	border-radius: 33px;
 	font-size: xxx-large;
 }
